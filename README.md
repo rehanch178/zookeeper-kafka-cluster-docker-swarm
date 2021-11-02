@@ -32,7 +32,10 @@ Create zookeeper/kafka data and log directories for data and log persistenet on 
     sudo mkdir -p /data/kafka
     sudo mkdir -p /data/log/kafka
 
+Get zookeeper docker-compose file from here https://github.com/rehanch178/zookeeper/blob/main/zookeeper-docker-compose.yaml , save it in a file and run command to setup 3 node zookeeper cluster as docker swarm stack
 
-Once you have docker installed, install docker-compose here https://docs.docker.com/compose/install/
+    sudo docker stack deploy -c zookeeper-docker-compose.yaml zk
+
+
 
 
