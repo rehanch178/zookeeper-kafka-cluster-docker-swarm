@@ -4,7 +4,9 @@ Before starting the cluster you will need to install docker (docker-engine >= 0.
 # Install docker on all the three nodes (node1, node2 and node3)
 # Setting up Docker
 Ubuntu
+
 You can install docker from here https://docs.docker.com/engine/install/ubuntu/
+
 Centos
 You can install docker from here https://docs.docker.com/engine/install/centos/
 
