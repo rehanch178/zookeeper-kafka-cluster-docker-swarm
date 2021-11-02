@@ -26,7 +26,7 @@ Create overlay network which is required for internal communication of the conta
     docker network create -d overlay --attachable vnetwork
 
 Create zookeeper/kafka data and log directories for data and log persistenet on the host machine. Run command on all the 3 nodes.
-The directories will be used to mount host vloume to the docker container. Data written into the data dorectores will be stored into the specified host path
+The directories will be used to mount host vloume to the docker container and when data is written on containers data dorectores, data will be stored into the specified host path
 
     sudo mkdir -p /data/zookeeper
     sudo mkdir -p /data/log/zookeeper
