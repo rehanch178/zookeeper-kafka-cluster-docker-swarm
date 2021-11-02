@@ -4,7 +4,7 @@ Before starting the cluster you will need to install docker (docker-engine >= 0.
 
 # Setting up Docker on Ubuntu
 You can install docker from here https://docs.docker.com/engine/install/ubuntu/
-# Setting up Docker on Ubuntu
+# Setting up Docker on Centos
 You can install docker from here https://docs.docker.com/engine/install/centos/
 
-Once you have docker installed, you can install docker-compose here
+Once you have docker installed, install docker-compose here https://docs.docker.com/compose/install/
