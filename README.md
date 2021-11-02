@@ -3,12 +3,9 @@
 Before starting the cluster you will need to install docker (docker-engine >= 0.10.0) and docker-compose. If you already have these installed, you can skip docker installation
 # Install docker on all the three nodes (node1, node2 and node3)
 # Setting up Docker
-Ubuntu
+Ubuntu > You can install docker from here https://docs.docker.com/engine/install/ubuntu/
 
-You can install docker from here https://docs.docker.com/engine/install/ubuntu/
-
-Centos
-You can install docker from here https://docs.docker.com/engine/install/centos/
+Centos > You can install docker from here https://docs.docker.com/engine/install/centos/
 
 # Configure 3 node docker swarm cluster where one node will be leader and the other two are worker
 Run command on node1 to initialize docker swarm cluster and save the token appers on the console. This token will be required to configure worker nodes
