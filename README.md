@@ -38,7 +38,7 @@ Get zookeeper docker-compose file from here https://github.com/rehanch178/zookee
 
     sudo docker stack deploy -c zookeeper-docker-compose.yaml zk
 
-One docker stack is deployed and all the services are up then verify zookeeper cluster has form the Quorum where one zookeeper node will be leader and the other two are follower. Login to each node's zookeeper container, run command and verify Mode of the command output.
+Once docker stack is deployed and all the services are up then verify zookeeper cluster has form the Quorum where one zookeeper node will be leader and the other two are follower. Login to each node's zookeeper container, run command and verify Mode of the command output.
 
     [root@zookeeper2 /]# echo stat | nc localhost 2181
     Zookeeper version: 3.6.2--803c7f1a12f85978cb049af5e4ef23bd8b688715, built on 09/04/2020 12:44 GMT
@@ -51,11 +51,17 @@ One docker stack is deployed and all the services are up then verify zookeeper c
     Connections: 1
     Outstanding: 0
     Zxid: 0x1800000000
-    # Mode: leader
+    Mode: leader
     Node count: 25
     Proposal sizes last/min/max: -1/-1/-
     
 The other node's mode should be Mode: follower
+
+Now setup Kafka cluster.Get kafka docker-compose file from here https://github.com/rehanch178/kafka/blob/main/kafka-docker-compose.yaml, save it in a file with name docker-compose.yaml and run command to setup 3 node kafka cluster as docker swarm stack
+
+    sudo docker stack deploy -c kafka-docker-compose.yaml kafka
+    
+Once docker stack is deployed and all the services are up then verify each kafka node has joined zookeeper cluster as kakfa brokers. Login to one of the zookeeper container, run command and list kafka brokers
 
 
 
