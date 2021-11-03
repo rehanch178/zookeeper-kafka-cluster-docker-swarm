@@ -28,7 +28,7 @@ Run docker label commands from the leader node. Here leader node is node1, docke
     sudo docker node update --label-add  node=node2 <NODE_ID> (Get node ID from docker node ls output and pass)
     sudo docker node update --label-add  node=node3 <NODE_ID> (Get node ID from docker node ls output and pass)
     
-Create overlay network which is required for internal communication of the containers in the docker swarm cluster
+Create overlay network which is required for internal communication of the containers inside docker swarm cluster
 
     docker network create -d overlay --attachable vnetwork
 
