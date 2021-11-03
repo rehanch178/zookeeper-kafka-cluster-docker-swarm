@@ -1,4 +1,4 @@
-# Set up 3 node zookeeper-kafka cluster in docker swarm (DRAFT)
+# Setup 3 node zookeeper-kafka cluster in docker swarm (DRAFT)
 # Setup
 Before starting the cluster you will need to install docker (docker-engine >= 0.10.0) and docker-compose. If you already have these installed, you can skip docker installation
 # Install docker on all the three nodes (node1, node2 and node3)
