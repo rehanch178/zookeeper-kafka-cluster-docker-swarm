@@ -77,7 +77,7 @@ Once docker stack is deployed and all the services are up then verify each kafka
     WatchedEvent state:SyncConnected type:None path:null
     [1, 2, 3]
     
-Login to one of the kafka container using docker exec <container_id> bash
+Login to one of the kafka container using docker exec -it <container_id> bash
 # Create Kafka Topics
     ./kafka/bin/kafka-topics.sh --create --bootstrap-server kafka1:9092,kafka2:9092,kafka3:9092 --topic TutorialTopic
 # List kafka Topics
