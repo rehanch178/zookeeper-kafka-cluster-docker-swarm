@@ -73,9 +73,17 @@ Once docker stack is deployed and all the services are up then verify each kafka
     [1, 2, 3]
     
 Login to one of the kafka container using docker exec <container_id> bash
-# Create Kafka topics
-    ./kafka/bin/kafka-topics.sh --create --zookeeper zookeeper1:2181 --replication-factor 1 --partitions 1 --topic TutorialTopic
-# List Topic
-    ./kafka/bin/kafka-topics.sh --list --zookeeper zookeeper1:2181
+# Create Kafka Topics
+    ./kafka/bin/kafka-topics.sh --create --bootstrap-server kafka1:9092,kafka2:9092,kafka3:9092 --topic TutorialTopic
+# List kafka Topics
+    ./kafka/bin/kafka-topics.sh --list --bootstrap-server kafka1:9092,kafka2:9092,kafka3:9092
+# Describe Kafka Topic
+    ./kafka/bin/kafka-topics.sh --describe --bootstrap-server kafka1:9092,kafka2:9092,kafka3:9092 --topic TutorialTopic
+# Push Message to kafka Topic
+    echo "Hello, World" | ./kafka/bin/kafka-console-producer.sh --broker-list kafka1:9092,kafka2:9092,kafka3:9092 --topic TutorialTopic
+# Cosume Message from Kafka Topic
+    ./kafka/bin/kafka-console-consumer.sh --bootstrap-server kafka1:9092,kafka2:9092,kafka3:9092 --topic TutorialTopic --from-beginning
+
+    
     
 
