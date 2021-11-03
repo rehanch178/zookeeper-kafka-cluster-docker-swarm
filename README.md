@@ -79,7 +79,7 @@ Login to one of the kafka container using docker exec <container_id> bash
     ./kafka/bin/kafka-topics.sh --list --bootstrap-server kafka1:9092,kafka2:9092,kafka3:9092
 # Describe Kafka Topic
     ./kafka/bin/kafka-topics.sh --describe --bootstrap-server kafka1:9092,kafka2:9092,kafka3:9092 --topic TutorialTopic
-# Push Message to kafka Topic
+# Push Message to Kafka Topic
     echo "Hello, World" | ./kafka/bin/kafka-console-producer.sh --broker-list kafka1:9092,kafka2:9092,kafka3:9092 --topic TutorialTopic
 # Cosume Message from Kafka Topic
     ./kafka/bin/kafka-console-consumer.sh --bootstrap-server kafka1:9092,kafka2:9092,kafka3:9092 --topic TutorialTopic --from-beginning
