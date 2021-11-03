@@ -63,6 +63,14 @@ Now setup Kafka cluster.Get kafka docker-compose file from here https://github.c
     
 Once docker stack is deployed and all the services are up then verify each kafka node has joined zookeeper cluster as kakfa brokers. Login to one of the zookeeper container, run command and list kafka brokers
 
+    [root@zookeeper2 /]# ./zookeeper/bin/zkCli.sh ls /brokers/ids
+    /usr/bin/java
+    Connecting to localhost:2181
+
+    WATCHER::
+
+    WatchedEvent state:SyncConnected type:None path:null
+    [1, 2, 3]
 
 
 
