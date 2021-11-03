@@ -73,9 +73,9 @@ Once docker stack is deployed and all the services are up then verify each kafka
     [1, 2, 3]
     
 Login to one of the kafka container using docker exec <container_id> bash
-Create Kafka topics
+# Create Kafka topics
     ./kafka/bin/kafka-topics.sh --create --zookeeper zookeeper1:2181 --replication-factor 1 --partitions 1 --topic TutorialTopic
-List Topic
+# List Topic
     ./kafka/bin/kafka-topics.sh --list --zookeeper zookeeper1:2181
     
 
