@@ -62,7 +62,7 @@ Once docker stack is deployed and all the services are up then verify zookeeper 
     
 The other node's mode should be Mode: follower
 
-Now setup Kafka cluster.Get kafka docker-compose file from here https://github.com/rehanch178/kafka/blob/main/kafka-docker-compose.yaml, save it in a file name zookeeper-docker-compose.yaml and run command to setup 3 node kafka cluster.
+Now setup Kafka cluster.Get kafka docker-compose file from here https://github.com/rehanch178/kafka/blob/main/kafka-docker-compose.yaml, save it in a file name kafka-docker-compose.yaml and run command to setup 3 node kafka cluster.
 
     sudo docker stack deploy -c kafka-docker-compose.yaml kafka
     
