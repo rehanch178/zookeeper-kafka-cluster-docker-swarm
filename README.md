@@ -38,6 +38,23 @@ Get zookeeper docker-compose file from here https://github.com/rehanch178/zookee
 
     sudo docker stack deploy -c zookeeper-docker-compose.yaml zk
 
+One docker stack is deployed and all the services are up then verify zookeeper cluster has form the Quorum where one zookeeper node will be leader and the other two are follower. Login to each node's zookeeper container, run command and verify zookeeper cluster is up
+
+    [root@zookeeper2 /]# echo stat | nc localhost 2181
+    Zookeeper version: 3.6.2--803c7f1a12f85978cb049af5e4ef23bd8b688715, built on 09/04/2020 12:44 GMT
+    Clients:
+      /127.0.0.1:49066[0](queued=0,recved=1,sent=0)
+
+    Latency min/avg/max: 0/0.0/0
+    Received: 2
+    Sent: 1
+    Connections: 1
+    Outstanding: 0
+    Zxid: 0x1800000000
+    Mode: leader
+    Node count: 25
+    Proposal sizes last/min/max: -1/-1/-
+
 
 
 
