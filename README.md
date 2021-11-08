@@ -32,6 +32,13 @@ Create overlay network which is required for internal communication of the conta
 
     docker network create -d overlay --attachable vnetwork
 
+Install docker-compose on the leader node.
+
+    sudo curl -L "https://github.com/docker/compose/releases/download/v2.1.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    sudo chmod +x /usr/local/bin/docker-compose
+    sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+    sudo docker-compose --version
+
 Create zookeeper/kafka data and log directories for data and log persistenet on the host machine.The directories will be used to mount host vloume to the docker container and when data is written on containers data directores, data will be stored into the specified host path. Run commands on all the 3 nodes.
 
     sudo mkdir -p /data/zookeeper
